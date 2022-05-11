@@ -27,7 +27,7 @@ public class loginframe extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField4 = new javax.swing.JTextField();
+        loginusername = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -37,7 +37,12 @@ public class loginframe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        loginusername.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        loginusername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginusernameActionPerformed(evt);
+            }
+        });
 
         jTextField5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
@@ -75,7 +80,7 @@ public class loginframe extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4)
+                            .addComponent(loginusername)
                             .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
@@ -86,7 +91,7 @@ public class loginframe extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(loginusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -101,6 +106,12 @@ public class loginframe extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginusernameActionPerformed
+    System.out.println("");
+    String textFieldValue = loginusername.getText();
+    int loginLength = textFieldValue.length();
+    }//GEN-LAST:event_loginusernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,7 +154,7 @@ public class loginframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField loginusername;
     // End of variables declaration//GEN-END:variables
 }

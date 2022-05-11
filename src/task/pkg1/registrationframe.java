@@ -30,8 +30,8 @@ public class registrationframe extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        textusername = new javax.swing.JTextField();
+        textpassword = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -46,9 +46,10 @@ public class registrationframe extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Registration form");
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        textusername.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        textusername.setName("textusername"); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        textpassword.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jTextField3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
@@ -101,8 +102,8 @@ public class registrationframe extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(169, 169, 169)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textusername, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(156, Short.MAX_VALUE))
@@ -118,11 +119,11 @@ public class registrationframe extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2))
                                 .addGap(26, 26, 26)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
                                 .addGap(32, 32, 32)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -141,7 +142,32 @@ public class registrationframe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("");
+    System.out.println("");
+    String textFieldValue = textusername.getText();
+    int usernameLength = textFieldValue.length();
+    String textFieldValues = textpassword.getText();
+    int checkPasswordComplexity = textFieldValue.length();
+
+if(usernameLength  > 5)
+{
+  System.out.println("username cannot be more than 5 characters");
+}
+
+if(textFieldValue.contains("_"))
+{
+  System.out.println("username cannot have a underscore");
+}
+
+if(checkPasswordComplexity  > 8 )
+{
+  System.out.println("password must not be more than 8 characters");
+}
+
+if(textFieldValues.contains("_"))
+{
+  System.out.println("password will not allow");
+}
+
     loginframe viewSelectedRow = new loginframe();
     viewSelectedRow.setVisible(true);
     //prevent the frame from closing the parent frame
@@ -193,9 +219,9 @@ public class registrationframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField textpassword;
+    private javax.swing.JTextField textusername;
     // End of variables declaration//GEN-END:variables
 }
