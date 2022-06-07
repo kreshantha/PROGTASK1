@@ -259,8 +259,8 @@ public class registrationframe extends javax.swing.JFrame {
                 UseOfGlobal.password = textpassword.getText();
                 
                 // if all is good.
-               loginframe viewSelectedRow = new loginframe(); // Pass data through
-               viewSelectedRow.setVisible(true);
+               loginframe LoginView = new loginframe(); // Pass data through
+               LoginView.setVisible(true);
          } catch (Exception e) {
               System.out.println(e);
          }
