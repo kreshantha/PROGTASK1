@@ -119,8 +119,32 @@ public class loginframe extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            loginUser();
+            Task2 task2 = new Task2();
+            Boolean LoggedInSuccess = loginUser();
+            if(LoggedInSuccess){               
+                                
+                  // If all is good.
+               Task2Frame Task2View = new Task2Frame(); // Pass data through
+               Task2View.setVisible(true);
+                
+                // Demo create task - may have to amend.
+                task2.setTaskID("001");
+                task2.setTaskNumber(1);
+                task2.setTaskName("First Task");
+                task2.setTaskDuration(0.3);
+                task2.setDeveloperFirstName("Kresh");
+                task2.setDeveloperLastNAme("Asari");
+                task2.setTaskDescription("My first task");
+                
+                // Display the task.
+                task2.printTaskDetails();
+            }
+            else{
+                System.out.println("Logged in failed lol");
+            }
+            
         } catch (Exception e) {
+            System.out.println(e);
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed
